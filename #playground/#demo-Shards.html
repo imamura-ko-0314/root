@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<meta charset="utf-8">
+<head>
+<title>Shards</title>
+<style>* {
+  margin: 0px;
+  padding: 0; }
+body {
+  background: #333;
+  overflow: hidden; }
+</style>
+</head>
+<body>
+<div id="bg"></div>	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="../Shards-master/shards.js"></script>
+<script>
+  $('#bg').shards(
+  	[10,35,180,.15],
+  	[255,20,220,.25],
+  	[0,0,0,.25],
+  	20,
+  	.58,
+  	2,
+  	.15,
+  	true);
+// $('element').shards(
+// 	colour_1 : RGBA配列 -> [255,255,55,.5],
+// 	colour_2 : RGBA配列 -> [255,255,55,.5],
+// 	shade_colour : RGBA配列 -> [255,255,55,.5],
+// 	number_of_shards : 整数 -> 12 max:100,
+// 	complexity : 10進数 -> .8 max:1,
+// 	lightness : 整数 -> 2 max:3,
+// 	alpha_constant : 10進数 -> .8 max:1,
+// 	fullscreen : 真偽値 -> true
+// );
+</script>
