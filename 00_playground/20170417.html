@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>20170417</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="../Swiper-3.4.1/dist/css/swiper.min.css">
+
+    <!-- Link Luminous's CSS -->
+    <link rel="stylesheet" media="screen, projection" href="../luminous-master/dist/luminous-basic.css">
+
+    <!-- Demo styles -->
+    <style>
+    html, body {
+        position: relative;
+        height: 100%;
+    }
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+        background: #333;
+        overflow: hidden;
+        background-image:url(../picture/hue_video/about.gif);
+    }
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        /*background: #fff;*/
+        /*color:#fff;*/
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        flex-direction: column;
+
+        font-size: 82px;
+        font-weight: 300;
+    }
+    img .lum-img {
+    	z-index: 100;
+    }
+    </style>
+</head>
+<body>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><h1>Luminous</h1></div>
+            <div class="swiper-slide">百聞は一見に如かず…</div>
+            <div class="swiper-slide">
+            	デモ見てください…
+            	<h1><a href="demo-Luminous.html">Luminous</a></h1></div>
+
+            <div class="swiper-slide">お気付きだろうか…</div>
+            <div class="swiper-slide">クリックした画像が<br>拡大表示される(だけ)だ！</div>
+            <div class="swiper-slide">以前にも似たようなのを<br>紹介してなかったって？</div>
+            <div class="swiper-slide">
+            	<a href="demo-Luminous.html"><img src="../picture/ShouTucker.jpg" height="80%"></a>
+            	IntenseImages
+            </div>
+
+            <div class="swiper-slide">せっかくなので<br>両者を比較しましょう</div>
+            <div class="swiper-slide">IntenseImagesの特徴</div>
+            <div class="swiper-slide">クリックで画像が全画面表示<br>キャプション挿入可能<br><font color="red">画像サイズに合わせてスクロール！</font></div>
+            <div class="swiper-slide">…イイね<br>Luminous勝ち目なさそう</div>
+
+            <div class="swiper-slide">Luminousの特徴</div>
+            <div class="swiper-slide">クリックで画像が拡大表示<br>キャプション挿入可能<br><font color="red">リスト表示可能！</font></div>
+            <div class="swiper-slide">けれども…</div>
+            <div class="swiper-slide">LuminousはSwiperと<br>上手いこと併用利用が<br>できなかったんですよね…</div>
+            <div class="swiper-slide">
+            	亡霊のように表示され続ける<br>NariyukiMatsumoto
+            	<a class="luminous" href="../picture/matsumoto_n.png">
+            		<img src="../picture/matsumoto_n.png" alt="nariyuki matsumoto"></a></div>
+
+            <div class="swiper-slide">今日の統括</div>
+            <div class="swiper-slide">今回紹介したLuminousより<br>IntenseImagesの方が<br>何か良さそうなだって？？</div>
+            <div class="swiper-slide">…私もそう思います</div>
+            <div class="swiper-slide">以上。</div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="../Swiper-3.4.1/dist/js/swiper.min.js"></script>
+
+    <!-- Luminous JS -->
+    <script src="../luminous-master/dist/Luminous.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 30,
+        keyboardControl: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+    });
+
+    new Luminous(document.querySelector('.luminous'));
+    new LuminousGallery(document.querySelectorAll('.luminous-gallery'), {}, {
+    	caption: function(trigger) {
+        return trigger.querySelector('img').getAttribute('alt');
+        }
+    });
+    </script>
+</body>
+</html>
