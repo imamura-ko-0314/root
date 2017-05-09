@@ -23,6 +23,7 @@
         padding: 0;
         background: #333;
         overflow: hidden;
+        background-image:url(../picture/hue_video/about.gif);
     }
     .swiper-container {
         width: 100%;
@@ -33,8 +34,8 @@
     .swiper-slide {
         text-align: center;
         font-size: 18px;
-        background: #fff;
-        color:#fff;
+        /*background: #fff;*/
+        /*color:#fff;*/
 
         /* Center slide text vertically */
         display: -webkit-box;
@@ -54,32 +55,47 @@
         font-size: 82px;
         font-weight: 300;
     }
+    img .lum-img {
+    	z-index: 100;
+    }
     </style>
 </head>
 <body>
     <!-- Swiper -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><h3>GitHubでサイトを<br>公開する方法</h3></div>
-            <div class="swiper-slide">Webページ公開したい時ってどうしますか？</div>
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide">リロードする度に<br>異なったグラデーションが<br>作られる</div>
-            <div class="swiper-slide">最近、今村で流行りの<br>jQuery未使用!!<br><br>…ではない<br>(jQuery依存のプラグイン)</div>
-            <div class="swiper-slide">
-                jQueryと、ダウンロードした<br>[shards.js]を読み込んで…
-                <img src="../picture/shards00.png"></div>
-            <div class="swiper-slide">
-                .shards();で<br>8つの引数を指定するだけ!!
-                <img src="../picture/shards01.png"></div>
-            <div class="swiper-slide">
-                ちなみに、<br>このスライド画像の設定はこれ
-                <img src="../picture/shards02.png"></div>
-            <div class="swiper-slide">次回(以降)予告</div>
-            <div class="swiper-slide">これやりたい…</div>
-            <div class="swiper-slide">
-                <a href="https://www.chromeexperiments.com/experiment/gesture-based-revealjs">Gestures + Reveal.JS</a>
-                <iframe width="853" height="480" src="https://www.youtube.com/embed/bXF68hNPuNo?autoplay=1" frameborder="0" allowfullscreen></iframe></div>
-            <div class="swiper-slide">またね。</div>
+            <div class="swiper-slide"><h3>GitHub Pages</h3>GitHubでWebページを<br>公開する方法<br>～Part1～</div>
+            <div class="swiper-slide">Webページを公開したい時…<br>どうしますか？</div>
+            <div class="swiper-slide">普通、Webサーバーを用意して<br>公開したファイルをアップロードして…</div>
+            <div class="swiper-slide"><h3>これ面倒!</h3>自分用のサーバーを<br>立てていない人なんかは特に</div>
+            <div class="swiper-slide">…ってことで、<br>GitHub使って公開する方法<br>共有します<br>（全2回で）</div>
+
+            <div class="swiper-slide">Part1<br>"gh-pages"というbranch作って公開</div>
+            <div class="swiper-slide"><h3>GitHub　Pagesとは…</h3>GitHubの公式が提供するサービス<br>Webページをネットに公開することができる</div>
+            <div class="swiper-slide">やり方</div>
+            <div class="swiper-slide">"gh-pages"というbranchを作成</div>
+            <div class="swiper-slide">以上！！<br>必要なファイルを"gh-pages"branchに<br>突っ込む必要はあるけど</div>
+            <div class="swiper-slide">公開されるURLは、<i>http://ユーザー.github.io/リポジトリ/</i>です</div>
+
+			<div class="swiper-slide">メリット</div>
+			<div class="swiper-slide"><h3>メリット1</h3>サーバー立てる必要無し</div>
+			<div class="swiper-slide"><h3>メリット2</h3>準備簡単<br>(GitHubに慣れていれば特に。)</div>
+			<div class="swiper-slide"><h3>メリット3</h3>jsなんかも動く！</div>
+
+			<div class="swiper-slide">注意点</div>
+			<div class="swiper-slide"><h3>注意点1</h3>GitHubのアカウントは必須</div>
+			<div class="swiper-slide"><h3>注意点2</h3>ソースも公開することになる</div>
+			<div class="swiper-slide"><h3>注意点3</h3>データベースを用いるような<br>動的なページの公開は不可</div>
+			<div class="swiper-slide"><h3>注意点4</h3>"gh-pages"branchでの作成物を<br>"master"branchにmergeするべき</div>
+
+            <div class="swiper-slide">次回予告</div>
+            <div class="swiper-slide">Part2<br>"master"branchでも公開可能に！</div>
+            <div class="swiper-slide"><h5>参考リンク<br>
+            	<a href="https://pages.github.com/">GitHub Pages 公式</a><br>
+            	<a href="http://peroon.hatenablog.com/entry/2013/05/18/171144">gh-pagesでGithubのプロジェクトをWEBページとして公開する方法</a>
+            	<a href="http://soudai1025.blogspot.jp/2012/07/github.html">GitHubでサイトを公開する方法</a><br>
+            </h5></div>
+            <div class="swiper-slide">以上です。</div>
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
@@ -88,14 +104,8 @@
         <div class="swiper-button-prev"></div>
     </div>
 
-    <!-- jQuery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
     <!-- Swiper JS -->
     <script src="../Swiper-3.4.1/dist/js/swiper.min.js"></script>
-
-    <!-- Shards JS -->
-    <script src="../Shards-master/shards.js"></script>
 
     <!-- Initialize Swiper -->
     <script>
@@ -109,15 +119,6 @@
         prevButton: '.swiper-button-prev',
     });
 
-    $('.swiper-slide').shards(
-        [10,35,180,.15],    //colour_1 : RGBA配列
-        [255,20,220,.25],   //colour_2 : RGBA配列
-        [0,0,0,.25],        //shade_colour : RGBA配列
-        20,                 //number_of_shards : 整数 max:100
-        .58,                //complexity : 10進数 max:1
-        2,                  //lightness : 整数 max:3
-        .15,                //alpha_constant : 10進数 max:1
-        true);              //fullscreen : 真偽値
     </script>
 </body>
 </html>
