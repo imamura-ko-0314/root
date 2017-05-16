@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>20170509</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="../Swiper-3.4.1/dist/css/swiper.min.css">
+
+    <!-- Demo styles -->
+    <style>
+    html, body {
+        position: relative;
+        height: 100%;
+    }
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+        background: #333;
+        overflow: hidden;
+        background-image:url(../picture/hue_video/about.gif);
+    }
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        /*background: #fff;*/
+        /*color:#fff;*/
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        flex-direction: column;
+
+        font-size: 82px;
+        font-weight: 300;
+    }
+    img .lum-img {
+    	z-index: 100;
+    }
+    </style>
+</head>
+<body>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><h3>GitHub Pages</h3>GitHubでWebページを<br>公開する方法<br>～Part1～</div>
+            <div class="swiper-slide">Webページを公開したい時…<br>どうしますか？</div>
+            <div class="swiper-slide">普通、Webサーバーを用意して<br>公開したファイルをアップロードして…</div>
+            <div class="swiper-slide"><h3>これ面倒!</h3>自分用のサーバーを<br>立てていない人なんかは特に</div>
+            <div class="swiper-slide">…ってことで、<br>GitHub使って公開する方法<br>共有します<br>（全2回で）</div>
+
+            <div class="swiper-slide">Part1<br>"gh-pages"というbranch作って公開</div>
+            <div class="swiper-slide"><h3>GitHub　Pagesとは…</h3>GitHubの公式が提供するサービス<br>Webページをネットに公開することができる</div>
+            <div class="swiper-slide">やり方</div>
+            <div class="swiper-slide">"gh-pages"というbranchを作成</div>
+            <div class="swiper-slide">以上！！<br>必要なファイルを"gh-pages"branchに<br>突っ込む必要はあるけど</div>
+            <div class="swiper-slide">公開されるURLは、<i>http://ユーザー.github.io/リポジトリ/</i>です</div>
+
+			<div class="swiper-slide">メリット</div>
+			<div class="swiper-slide"><h3>メリット1</h3>サーバー立てる必要無し</div>
+			<div class="swiper-slide"><h3>メリット2</h3>準備簡単<br>(GitHubに慣れていれば特に。)</div>
+			<div class="swiper-slide"><h3>メリット3</h3>jsなんかも動く！</div>
+
+			<div class="swiper-slide">注意点</div>
+			<div class="swiper-slide"><h3>注意点1</h3>GitHubのアカウントは必須</div>
+			<div class="swiper-slide"><h3>注意点2</h3>ソースも公開することになる</div>
+			<div class="swiper-slide"><h3>注意点3</h3>データベースを用いるような<br>動的なページの公開は不可</div>
+			<div class="swiper-slide"><h3>注意点4</h3>"gh-pages"branchでの作成物を<br>"master"branchにmergeするべき</div>
+
+            <div class="swiper-slide">次回予告</div>
+            <div class="swiper-slide">Part2<br>"master"branchでも公開可能に！</div>
+            <div class="swiper-slide"><h5>参考リンク<br>
+            	<a href="https://pages.github.com/">GitHub Pages 公式</a><br>
+            	<a href="http://peroon.hatenablog.com/entry/2013/05/18/171144">gh-pagesでGithubのプロジェクトをWEBページとして公開する方法</a><br>
+            	<a href="http://soudai1025.blogspot.jp/2012/07/github.html">GitHubでサイトを公開する方法</a><br>
+            </h5></div>
+            <div class="swiper-slide">以上です。</div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="../Swiper-3.4.1/dist/js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 30,
+        keyboardControl: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+    });
+
+    </script>
+</body>
+</html>
